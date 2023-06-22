@@ -1,4 +1,4 @@
-input = open('day-1-input.txt')
+input = open('input.txt')
 
 data = input.read().splitlines()
 index = 0
