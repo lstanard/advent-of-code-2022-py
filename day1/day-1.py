@@ -1,17 +1,10 @@
-input = open('input.txt')
+with open('input.txt') as file:
+    data = file.read().splitlines()
 
-data = input.read().splitlines()
-index = 0
-results = []
+results = [0]
 for item in data:
-    if item:
-        if len(results) > index:
-            value = results[index]
-            results[index] = value + int(item)
-        else:
-            results.insert(index, int(item))
-    else:
-        index += 1
+    results.append(results[-1] + int(item) if item else 0)
 
+# part 1 solution = 68787
 print(max(results))
-input.close()
+# part 2 solution = 198041
