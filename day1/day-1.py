@@ -7,4 +7,7 @@ for item in data:
 
 # part 1 solution = 68787
 print(max(results))
+
 # part 2 solution = 198041
+results.sort()
+print(results[-1] + results[-2] + results[-3])
